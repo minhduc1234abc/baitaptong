@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bão mạng</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #e91e63;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .title {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+            gap: 3%;
+        }
+        .news {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .news img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+            }
+        }
+        @media (max-width: 480px) {
+            .news-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Bão mạng</div>
+        <div class="news-grid">
+            <div class="news">
+                <img src="mèo.png" alt="Tin 1">
+                <p>Vụ mẹ và bé 3 tháng tuổi rơi từ tầng 12 chung cư tử vong...</p>
+            </div>
+            <div class="news">
+                <img src="đầu lâu.png" alt="Tin 2">
+                <p>MXH khen ngợi anh CSGT dính đầy máu khi đưa cô gái bị nạn đi cấp cứu...</p>
+            </div>
+            <div class="news">
+                <img src="tom.png" alt="Tin 3">
+                <p>Lại xuất hiện clip chốt bán đất nhanh như chớp...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
