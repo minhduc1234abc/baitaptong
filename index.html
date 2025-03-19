@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Cá Nhân</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .top-menu {
+            background-color: #0078d4;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .menu-list li {
+            display: inline;
+        }
+        .menu-list a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        .menu-list a:hover {
+            background-color: #0056a3;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .profile-section, .content-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .profile-section {
+            width: 30%;
+            text-align: center;
+        }
+        .profile-section img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #333;
+        }
+        .content-section {
+            width: 65%;
+        }
+        .lesson {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        .lesson h2 {
+            cursor: pointer;
+            color: #007BFF;
+            text-decoration: underline;
+        }
+        .lesson-content {
+            display: none;
+            padding-top: 10px;
+        }
+        .lesson ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .lesson ul li {
+            padding: 8px 0;
+        }
+        .lesson ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .lesson ul li a:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="top-menu">
+            <ul class="menu-list">
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="#">Bài Tập</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="profile-section">
+            <img src="tom.png" alt="Avatar">
+            <h2>Vũ Minh Đức</h2>
+            <p>Chuyên ngành: CNTTD2024AA (HNMU)</p>
+            <p>Sở thích: Bóng rổ, pha chế cà phê, chơi game</p>
+            <p>Định hướng: Chủ đầu tư</p>
+        </section>
+        <section class="content-section">
+            <div class="lesson">
+                <h2 onclick="toggleLesson(1)">📚 bà 1</h2>
+                <div class="lesson-content" id="lesson1">
+                    <ul>
+                        <li><a href="bai1cach1.html">Bài 1</a></li>
+                        <li><a href="bai1cach2.html">Bài 1.2</a></li>
+                        <li><a href="bai1cach3.html">Bài 1.33</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lesson">
+                <h2 onclick="toggleLesson(3)">📚 bài lap66 </h2>
+                <div class="lesson-content" id="lesson3">
+                    <ul>
+                        <li><a href="bai1lap6.html">Bài 1</a></li>
+                        <li><a href="bai2.1lap6.html">Bài 2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function toggleLesson(lessonId) {
+            var content = document.getElementById('lesson' + lessonId);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
